@@ -44,7 +44,25 @@ void print_node(Node* n){
 }
 
 int is_valid(Node* n){
-
+   int filas[9][9] = {0};
+   int columnas[9][9] = {0};
+   int submatrices[9][9] = {0};
+   int x,y;
+   for(x=0;x<9;x++){
+      for(y=0;y<9;y++){
+         int numero = n->sudo[x][y];
+         if(numero!=0){
+            int submatriz = (x/3)*3 + y/3;
+            if(filas[x][numero-1] == 1 || columnas[y][numero-1] == 1 || submatrices[submatriz][numero-1] == 1){
+               return 0;
+            }
+            filas[x][numero-1] = 1;
+            columnas[y][numero-1] = 1;
+            submatrices[submatriz][numero-1] = 1;
+            
+         }
+      }
+   }
     return 1;
 }
 
