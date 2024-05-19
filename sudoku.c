@@ -130,7 +130,7 @@ Node* DFS(Node* initial, int* cont){
       }
 
 
-      list *adj = get_adj_nodes(n);
+      List *adj = get_adj_nodes(n);
       Node *aux = first(adj);
       while(aux){
          push(stack, aux);
