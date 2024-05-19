@@ -117,7 +117,7 @@ Node* DFS(Node* initial, int* cont){
 
    while(!is_empty(stack)){
       Node* n = top(stack);
-      pop(Stack);
+      pop(stack);
       (*cont)++;
       if(is_final(n)){
          while(is_empty(stack)){
