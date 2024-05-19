@@ -90,7 +90,7 @@ List* get_adj_nodes(Node* n){
    }
    for(x=0;x<9;x++){
       Node* new_node = copy(n);
-      new_node->sudo[fila][columna] = i + 1;
+      new_node->sudo[fila][columna] = x + 1;
       if(is_valid(new_node)){
          pushBack(list,new_node);
       }else{
